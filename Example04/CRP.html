@@ -7,8 +7,8 @@
   <body>
     <p>Hello <span>web performance</span> listeners!</p>
     <div><img src="awesome-photo.jpg"></div>
-    <script>console.log(window.performance.now());</script>
+    <script>var start = window.performance.now(); console.log(' before app.js load is ' + start);</script>
     <script src="app.js"></script>
-    <script>console.log(window.performance.now());</script>
+    <script>console.log(' after app.js load is ' + window.performance.now() - start);</script>
   </body>
 </html>
